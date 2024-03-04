@@ -51,4 +51,63 @@ body {
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
-  
+
+  /* Buttons */
+  .calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+  }
+  button {
+    min-height: 50px;
+    font-size: 20px;
+    font-weight: 100;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgb(199, rgb(158, 161, 158), blue);
+  }
+
+  button:hover {
+    filter: brightness(90%);
+  }
+
+  button:active {
+    transform: translateY(1px);
+  }
+
+  button:focus {
+    outline: none;
+  }
+
+  .operator {
+    background: grey;
+    color: white;
+    font-size: 30px;
+  }
+
+  .clear {
+    background: rgb(245, 15, 15);
+    color: rgb(233, 205, 209);
+  }
+
+  .clear:hover {
+    filter: brightness(70%);
+  }
+  .equal-sign {
+    grid-column: -2;
+    grid-row: 2 / span 4;
+    background: rgb(8, 82, 8);
+  } 
+
+  .equal-sign:hover {
+    filter: brightness(70%);
+  }
+
+  /* Media Query; Large Smartphone (Vertical) */
+  @media screen and (max-width: 600px) {
+    .calculator {
+        width: 95%;
+    }
+  } 
